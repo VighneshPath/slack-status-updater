@@ -5,7 +5,7 @@ description = "A CLI tool to update your Slack status with emoji, text, and opti
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
-authors = [{ name = "Your Name", email = "your@email.com" }]
+authors = [{ name = "VighneshPath", email = "vighneshs@sahaj.ai" }]
 dependencies = [
     "typer",
     "requests",

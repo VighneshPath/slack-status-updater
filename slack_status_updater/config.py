@@ -17,6 +17,7 @@ def load_env_from_default_locations():
     load_dotenv()
 
 load_env_from_default_locations()
+
 def get_slack_token() -> str:
     token = os.getenv("SLACK_API_TOKEN")
     if not token:
