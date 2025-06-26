@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-slack-status = "slack_status_updater.cli:app"
+slack-status = "slack_status_updater.main:app"
 
 [tool.setuptools]
 packages = ["slack_status_updater"]
