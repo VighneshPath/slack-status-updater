@@ -7,7 +7,7 @@ requires-python = ">=3.8"
 license = { text = "MIT" }
 authors = [{ name = "Your Name", email = "your@email.com" }]
 dependencies = [
-    "typer[all]",
+    "typer",
     "requests",
     "python-dotenv"
 ]
@@ -25,6 +25,5 @@ build-backend = "setuptools.build_meta"
 [project.optional-dependencies]
 dev = [
     "pytest",
-    "requests-mock",
-    "typer[all]"
+    "requests-mock"
 ]

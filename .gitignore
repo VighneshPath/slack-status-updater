@@ -6,3 +6,4 @@ slack_status_updater.egg-info
 slack_status.egg-info
 .DS_Store
 build
+**/__pycache__/

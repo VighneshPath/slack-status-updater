@@ -358,9 +358,9 @@ wheels = [
 ]
 
 [[package]]
-name = "slack-status-updater"
+name = "slack-status"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "python-dotenv", version = "1.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "python-dotenv", version = "1.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
@@ -373,7 +373,6 @@ dev = [
     { name = "pytest", version = "8.3.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.9'" },
     { name = "pytest", version = "8.4.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.9'" },
     { name = "requests-mock" },
-    { name = "typer" },
 ]
 
 [package.metadata]
@@ -383,7 +382,6 @@ requires-dist = [
     { name = "requests" },
     { name = "requests-mock", marker = "extra == 'dev'" },
     { name = "typer" },
-    { name = "typer", extras = ["all"], marker = "extra == 'dev'" },
 ]
 provides-extras = ["dev"]
 
