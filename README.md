@@ -31,7 +31,7 @@ Or you can pass the token directly as a CLI option.
 ### Set Slack Status
 
 ```bash
-slack-status --text "Working remotely" --emoji ":house:" --expiration 3600
+slack-status set-status --text "Working remotely" --emoji ":house:" --expiration 3600
 ```
 
 | Option         | Description                                        |
@@ -39,6 +39,18 @@ slack-status --text "Working remotely" --emoji ":house:" --expiration 3600
 | `--text`       | Status message text (required)                     |
 | `--emoji`      | Emoji code (e.g. `:house:`) (required)             |
 | `--expiration` | Optional duration in seconds (e.g. 3600 = 1 hour)  |
+| `--token`      | (Optional) Pass token directly if not using `.env` |
+
+---
+
+### Remove Slack Status
+
+```bash
+slack-status remove-status
+```
+
+| Option         | Description                                        |
+| -------------- | -------------------------------------------------- |
 | `--token`      | (Optional) Pass token directly if not using `.env` |
 
 ---

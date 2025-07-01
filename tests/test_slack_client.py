@@ -23,3 +23,26 @@ def test_update_status_failure(requests_mock):
     updater = SlackStatusUpdater(token)
     with pytest.raises(RuntimeError, match="Slack API error"):
         updater.update_status("Failing test", ":x:")
+        
+def test_remove_status_success(requests_mock):
+    token = "fake-token"
+    requests_mock.post(
+        "https://slack.com/api/users.profile.set",
+        json={"ok": True},
+        status_code=200
+    )
+
+    updater = SlackStatusUpdater(token)
+    updater.remove_status()
+
+def test_remove_status_failure(requests_mock):
+    token = "fake-token"
+    requests_mock.post(
+        "https://slack.com/api/users.profile.set",
+        json={"ok": False, "error": "invalid_auth"},
+        status_code=400
+    )
+
+    updater = SlackStatusUpdater(token)
+    with pytest.raises(RuntimeError, match="Slack API error"):
+        updater.remove_status()

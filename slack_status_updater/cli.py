@@ -43,3 +43,17 @@ def set_status(
     except Exception as e:
         typer.secho(f"❌ {e}", fg=typer.colors.RED)
         raise typer.Exit(code=1)
+
+def remove_status(token: str = typer.Option(None, help="Slack API token (overrides env)")):
+    """Remove your Slack status."""
+    try:
+        slack_token = token or get_slack_token()
+        updater = SlackStatusUpdater(slack_token)
+        updater.remove_status()
+
+        msg = f"✅ Status removed"
+        typer.echo(msg)
+
+    except Exception as e:
+        typer.secho(f"❌ {e}", fg=typer.colors.RED)
+        raise typer.Exit(code=1)

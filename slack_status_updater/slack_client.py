@@ -19,3 +19,16 @@ class SlackStatusUpdater(StatusUpdater):
         response = requests.post(self.api_url, json={"profile": profile}, headers=headers)
         if not response.ok or not response.json().get("ok", False):
             raise RuntimeError(f"Slack API error: {response.text}")
+        
+    def remove_status(self) -> None:
+        headers = {
+            "Authorization": f"Bearer {self.token}",
+            "Content-Type": "application/json"
+        }
+        profile = {
+            "status_text": "",
+            "status_emoji": ""
+        }
+        response = requests.post(self.api_url, json={"profile": profile}, headers=headers)
+        if not response.ok or not response.json().get("ok", False):
+            raise RuntimeError(f"Slack API error: {response.text}")
