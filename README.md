@@ -16,6 +16,10 @@ uv pip install git+https://github.com/VighneshPath/slack-status-updater
 
 ## 🛠️ Configuration
 
+Generating a token
+
+https://github.com/user-attachments/assets/f27689b0-f84b-4090-9033-0e7ccea8fe8a
+
 Create a `.env` file in your home directory or project root with your Slack API token:
 
 ```
