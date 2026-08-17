@@ -3,7 +3,7 @@
 You can install the CLI tool directly from GitHub using [`uv`](https://github.com/astral-sh/uv):
 
 ```bash
-uv pip install git+https://github.com/VighneshPath/slack-status-updater --system
+uv tool install git+https://github.com/VighneshPath/slack-status-updater
 ```
 
 > ℹ️ Make sure you have Python 3.8+ and `uv` installed:
